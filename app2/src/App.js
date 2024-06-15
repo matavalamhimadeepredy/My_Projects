@@ -1,3 +1,4 @@
+import RegistrationForm from "../../Reactjs/Component/Registration.form";
 import Users from "./Components/Users";
 
 function App() {                                                                                                    
@@ -5,8 +6,9 @@ function App() {
       <div>
        {/* <h3>welcome to himadeepreddy</h3> */}
        {/* <Reddy/> */}
-       <Users/>
-                   </div>
+       {/* <Users/> */}
+      
+                         </div>
     );
   }
   
