@@ -8,6 +8,7 @@ export default class Form extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>
+                Fname:""
               Name:
               <input
                 type="text"
@@ -21,8 +22,8 @@ export default class Form extends Component {
             <label>
               Email:
               <input
-                type="email"
-                name="email"
+                type="Email"
+                name="Email"
                 value={Email}
                 onChange={this.handleChange}
               />
