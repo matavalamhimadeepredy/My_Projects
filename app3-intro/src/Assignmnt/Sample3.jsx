@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-const User = () => {
+const Sample3= () => {
   const [userDetails, setUserDetails] = useState({
     fname: "",
     lname: "",
@@ -139,7 +139,7 @@ const User = () => {
           </div>
           <div className="col-9">
             <table border={1}></table>
-            <table className="table table-striped table-hover">
+            <table className="table table-striped table-hover" border={1}>
               <thead>
                 <tr>
                   <th>First Name</th>
@@ -190,4 +190,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Sample3;

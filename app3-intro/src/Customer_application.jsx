@@ -188,7 +188,7 @@ const Customer_application = () => {
             </form>
           </div>
           <div className="col-9">
-            <table className="table table-striped table-hover" border={1}>
+            <table className="table table-striped table-hover" border={1} >
               <thead>
                 <tr>
                   <th>Name</th>
