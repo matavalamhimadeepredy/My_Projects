@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nethaji_Reddy = ({ handleChange, user, createUser, isEdit,updateUser }) => {
+const Nethaji_form = ({ handleChange, user, createUser, isEdit,updateUser }) => {
   return (
     <div>
       <form>
@@ -79,4 +79,4 @@ const Nethaji_Reddy = ({ handleChange, user, createUser, isEdit,updateUser }) =>
   );
 };
 
-export default Nethaji_Reddy;
+export default Nethaji_form
