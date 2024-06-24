@@ -1,11 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Nethaji from './Crud-Assignment1/Netjaji_user';
+
+
+import Dinesh_form from './Crud-Assignment1/Dinesh_form';
+import Nethajiform from './Crud-Assignment1/Nethaji_form';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Nethaji/>
+      <Nethajiform />
+     <Dinesh_form/>
+
+
+
     </div>
   );
 }
