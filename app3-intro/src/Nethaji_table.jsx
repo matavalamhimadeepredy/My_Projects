@@ -1,5 +1,5 @@
-  
-const Nethaji_table_assignmentable = ({ allUsers,editUser,deleteUser }) => {
+
+const Nethaji_table_assignmentable = ({ allUsers, editUser, deleteUser }) => {
   return (
     <div>
       <table className="table table-striped table-hover">
@@ -14,21 +14,21 @@ const Nethaji_table_assignmentable = ({ allUsers,editUser,deleteUser }) => {
           </tr>
         </thead>
         <tbody>
-            {allUsers.map((usr,i)=>{
-                return <tr key={i}>
-                    <td>{usr.name}</td>
-                    <td>{usr.email}</td>
-                    <td>{usr.password}</td>
-                    <td>{usr.contact}</td>
+          {allUsers.map((usr, i) => {
+            return <tr key={i}>
+              <td>{usr.name}</td>
+              <td>{usr.email}</td>
+              <td>{usr.password}</td>
+              <td>{usr.contact}</td>
 
-                    <td>
-                        <button className="btn btn-warning" onClick={()=>{editUser(usr)}}>Edit</button>
-                    </td>
-                    <td>
-                        <button className="btn btn-danger" onClick={()=>{deleteUser(usr)}}>Delete</button>
-                    </td>
-                </tr>
-            })}
+              <td>
+                <button className="btn btn-warning" onClick={() => { editUser(usr) }}>Edit</button>
+              </td>
+              <td>
+                <button className="btn btn-danger" onClick={() => { deleteUser(usr) }}>Delete</button>
+              </td>
+            </tr>
+          })}
         </tbody>
       </table>
     </div>
