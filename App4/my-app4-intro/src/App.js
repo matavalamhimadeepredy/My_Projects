@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Nethajiform />
-     <Dinesh_form/>
+      <Dinesh_form />
 
 
 
