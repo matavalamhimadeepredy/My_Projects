@@ -1,15 +1,12 @@
-
-// import Dinesh_form from './Crud-Assignment1/Dinesh_form';
-// import Nethajiform from './Crud-Assignment1/Nethaji_form';
-
-import { Sample1 } from "./Crud-Assignment1/Practise/Sample1";
-
+import Clickcounter from "./Component/Counter/Clickcounter";
+import Reddy from "./Component/Counter/Reddy";
+import Hovercounter from "./Component/Counter/Reddy";
 function App() {
   return (
     <div className="App">
-      {/* <Nethajiform />
-      <Dinesh_form /> */}
-      <Sample1/>
+      <Clickcounter />
+      <hr />
+      <Reddy/>
     </div>
   );
 }
