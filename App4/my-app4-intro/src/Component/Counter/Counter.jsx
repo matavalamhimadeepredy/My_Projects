@@ -1,12 +1,7 @@
+import React,{ useState } from "react";
+const Counter = (props) => {
 
-import React, {useState}from "react"
-
-const Counter =(props)=>{
-
-
-    console.log(props)
-
-    return(
+    return (
         <div>
             {props.render}
         </div>

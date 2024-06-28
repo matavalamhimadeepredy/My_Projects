@@ -8,10 +8,9 @@ const Clickcounter=({count,handleincrement}) => {
 <button onClick={handleincrement} className="btn btn-primary">Click me hima</button>
  <br /> <br />
 
- <h3> you click {count} times</h3>
- 
+ <h1> you clicked {count}   Times</h1> 
 
         </div>
     )
 }
-export default Clickcounter;
+export default Clickcounter

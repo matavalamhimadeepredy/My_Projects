@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-const HoveverCounter=() => {
-    return(
+const HoveverCounter = ({ Count, handleincrement }) => {
+    return (
         <div>
             <br />
+            <button  onMouseOver={handleincrement} className="btn btn-primary">Hover me</button>
             <br /> <br />
-            <button onClick={handleincrement} className="btn btn-primary">click me</button>
-        <h1> you clicked  {Count} times</h1>
+            <h1> you Hovered {Count} Times</h1>
 
         </div>
     )
 }
 
-export default HoveverCounter;
+export default HoveverCounter
