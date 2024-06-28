@@ -1,10 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
  
-const Clickcounter=() => {
+const Clickcounter=({count,handleincrement}) => {
     return(
         <div>
-<button className="btn btn-primary">Click me hima</button>
+            <br />
+            
+<button onClick={handleincrement} className="btn btn-primary">Click me hima</button>
+ <br /> <br />
+
+ <h3> you click {count} times</h3>
+ 
+
         </div>
     )
 }
-export default Clickcounter
+export default Clickcounter;
