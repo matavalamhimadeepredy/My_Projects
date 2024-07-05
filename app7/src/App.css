@@ -1,0 +1,43 @@
+#mainDiv{
+  width: 1700px;
+  height: 700px;
+  background: blueviolet ;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#Parent{
+  width: 800px;
+  height: 500px;
+  background: greenyellow;
+  margin:  0 auto;
+
+}
+#Grantparent{
+  width: 100px;
+  height: 980px;
+  background: red;
+  margin: 0 auto;
+  display:  flex;
+  text-align: center;
+  align-items: center;
+}
+#grantchild{
+  width: 600px;
+  height: 400px;
+  background: greenyellow;
+  margin:  0 auto;
+  display:  flex;
+  text-align: center;
+  align-items: center;
+}
+#Child{
+  width: 400px;
+  height: 300px;
+  background: yellow;
+  margin:  0 auto;
+  display:  flex;
+  text-align: center;
+  align-items: center;
+}
