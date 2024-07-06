@@ -2,7 +2,7 @@ import React from "react";
 
 import { useState } from "react";
 
- const Hover_Counter =()=>{
+ const Hima_Hover_Counter =()=>{
    const [count,setcount]= useState(0);
 
    const incrementcount=()=>{
@@ -18,4 +18,4 @@ import { useState } from "react";
    </div>
 
  }
- export default Hover_Counter
+ export default Hima_Hover_Counter;

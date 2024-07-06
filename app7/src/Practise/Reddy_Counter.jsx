@@ -4,7 +4,7 @@ import { useState } from "react";
 
  const Reddy_counter =({props})=>{
   
-     const [setcount,count,increount]= useState(0);
+     const [setcount,count,incrementount]= useState(0);
 
    const incrementcount=()=>{
     setcount (count+1)
@@ -15,7 +15,7 @@ import { useState } from "react";
    return <div>
     <h2>you clicked{count} times</h2>
     <button onClick={incrementcount}>increment</button>
-    <button onClick={decrement}>decrement</button>
+    <button onClick={decrement  }>decrement</button>
    </div>
 
  }

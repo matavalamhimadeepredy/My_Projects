@@ -5,8 +5,9 @@
 // import Main from "./Assignment hima/Main";
 // import Parent from "./Assignment hima/Parent";
 
+
+import Hima_Hover_Counter from "./Practise/Hima_Hover";
 import HOOc_comp from "./Practise/HOOC comp";
-import Hover_Counter from "./Practise/Hover";
 import Reddy_counter from "./Practise/Reddy_Counter";
 
 
@@ -23,7 +24,7 @@ function App() {
 
     {/* <Reddy_counter/>   */}
     <hr/> 
-    {/* <Hover_Counter/>    */}
+   {/* <Hima_Hover_Counter/> */}
     <hr/>
     <HOOc_comp/>
         </div>
