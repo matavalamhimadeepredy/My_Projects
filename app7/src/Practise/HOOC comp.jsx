@@ -1,9 +1,10 @@
 import React from "react";
 import Reddy_counter from "./Reddy_Counter";
+import { useState } from "react";
   
-const HOOccomp =(Reddy_counter)=>{
+const HOOc_comp =(Reddy_counter)=>{
     const NewHooc =()=>{
-    return<Reddy_counter person={welcometoreddy}/>;
+    return<Reddy_counter person={"welcometoreddy"}/>;
     const [count,setcount]= useState(0);
 
     const incrementcount=()=>{
@@ -16,4 +17,4 @@ const HOOccomp =(Reddy_counter)=>{
     }; 
     return NewHooc;
 };
-export default HOOccomp;
+export default HOOc_comp;
