@@ -4,6 +4,8 @@
 import './App.css'
 
 import Main from "./Assignment hima/Main";
+import Hima_Hover_Counter from './Practise/Hima_Hover';
+import Reddy_counter from './Practise/Reddy_Counter';
 
 
 
@@ -11,7 +13,10 @@ import Main from "./Assignment hima/Main";
 function App() {
   return (
     <div className="App">
-      <Main />
+      {/* <Main /> */}
+      {/* <Hima_Hover_Counter/> */}
+     {/* <hr></hr> */}
+     <Reddy_counter/>
     </div>
   );
 }

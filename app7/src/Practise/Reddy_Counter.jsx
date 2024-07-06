@@ -4,7 +4,7 @@ import { useState } from "react";
 
  const Reddy_counter =({props})=>{
   
-     const [setcount,count,increcount]= useState(0);
+     const [count,setcount]= useState(0);
 
    const incrementcount=()=>{
     setcount (count+1)
