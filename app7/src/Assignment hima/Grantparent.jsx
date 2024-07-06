@@ -1,11 +1,12 @@
 
-import React from "react";
+import React, { useState } from "react";
 import Parent from "./Parent";
 
  const Grantparent =({message}) => {
+    
     return(
         <div  id="Grantparent">
-            <p>Grantparent</p>
+            <p>welcome to gp</p>
            <Parent message={message}/>
         </div>
     )

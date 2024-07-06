@@ -1,3 +1,24 @@
-.App{
+#main{
+  width: 1000px;
+  height: 700px;
+  background-color: red;
+  margin: 50px auto;
   text-align: center;
+  align-items: center;
+}
+#parent{
+  width: 800px;
+  height: 500px;
+  background-color: blue;
+  margin: 50px auto;
+  text-align: center;
+  align-items: center;
+}
+#child{
+  width: 400px;
+  height: 500px;
+  background-color: yellowgreen;
+  margin: 50px auto;
+  text-align: center;
+  align-items: center;
 }

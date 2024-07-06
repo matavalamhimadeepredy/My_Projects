@@ -6,7 +6,6 @@ import Child from "./Child";
     return(
         <div  id="Grantchild" >
             <p>Grantchild</p>
-           <Grantchild/>
            <Child message ={message}/>
         </div>
     )

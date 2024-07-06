@@ -1,13 +1,12 @@
 
 import React, { useState } from "react";
 import Grantparent from "./Grantparent";
-import { usercontextconsumer } from "./User.context";
 
  const Main =() => {
-    const {message,setmessage}=useState("welcome to reddy")
-    const[greeting,setgreeting]=useState("context api")  
+    const [message]=useState("welcome to reddy")
+    const[greeting]=useState("context api")  
     return(
-        <div  id="maindiv">
+        <div  id="main">
             <p>Main</p>
             <usercontextprovider value={greeting }>
             <Grantparent message={message}/>
