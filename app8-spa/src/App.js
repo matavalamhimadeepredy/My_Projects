@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Component/Home';
 import About from './Component/About';
@@ -10,16 +11,18 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Navbar/>
-     <Routes>
-      <Route path="/" element={<Home/> }/>
-      <Route path="/About" element={<About/>}/>
-      <Route path="Contact" element={<Contact/>}/>
-     </Routes>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="Contact" element={<Contact />} />
+        </Routes>
       </Router>
+      
       {/* <Home/>
       <About/>
       <Contact/> */}
+
     </div>
   );
 }
