@@ -6,6 +6,9 @@ import Home from './Component/Home';
 import About from './Component/About';
 import Contact from './Component/Contact';
 import Navbar from './Component/Navbar';
+import PageNotFound from './Component/Hima_page';
+import Hima_page from './Component/Hima_page';
+
 
 function App() {
   return (
@@ -15,13 +18,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="Contact" element={<Contact />} />
+          <Route path="/Contact" element={<Contact />} />
+           <Route path="/**" element={<PageNotFound/>}/>
+          
         </Routes>
       </Router>
       
-      {/* <Home/>
+      <Home/>
       <About/>
-      <Contact/> */}
+      <Contact/> 
+       <Hima_page/>
+      
+      
 
     </div>
   );
