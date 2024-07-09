@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Users = () => {
     const [usersDetails, setuserDetails] = useState([]);
@@ -9,14 +10,20 @@ const Users = () => {
     const getusers = async () => {
         const response = await
             (await fetch("https://jsonplaceholder.typicode.com/users"
-
             ).then());
-        const users = await response.json()
+        const users = await response.json();
+        
         setuserDetails(users)
     }
     return (
-        <div>
-{usersDetails.map((usr,i)=><p key={i}>{usr.name}</p>)}
+        <div className="container">
+            {usersDetails.map((usr, i) =>
+                <p key={i}>
+                    <Link to={`${usr.id}`}>{usr.name}</Link>
+                    
+                    
+                </p>
+            )}
         </div>
     )
 }
