@@ -1,7 +1,13 @@
 import React from 'react'
-import { NavLink, navLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    const handleLogout=()=>{
+        
+        localStorage.clear();
+       
+
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container-fluid">
@@ -12,25 +18,25 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                        <NavLink to={'/'} className="nav-link">
+                        <NavLink to={"/"} className="nav-link">
                                 Home
                             </NavLink>                        </li>
                         <li className="nav-item">
-                        <NavLink to={'/about'} className="nav-link">
+                        <NavLink to={"/about"} className="nav-link">
                                 About
                             </NavLink>                        </li>
 
                         <li className="nav-item">
-                        <navLink to={'/users'} className="nav-link" >
+                        <navLink to={"/users"} className="nav-link" >
                                 Users
                             </navLink>                        </li>
                     </ul>
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Login</a>
+                            <NavLink className="nav-link"to={"/login"} >Login</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Logout</a>
+                            <NavLink className="nav-link" to={"/login"}onClick={handleLogout}>Logout</NavLink>
                         </li>
                     </ul>
                 </div>
