@@ -5,12 +5,13 @@ import {users} from'react'
 
 const UserDetails = () => {
     const id = useParams();
+   
     
     const getusersDetails = async () => {
         const response = await fetch("https://jsonplaceholder.typicode.com/users/${id}");
         const userdata = await response.json();
-
-
+        getusersDetails();
+       
     };
 
     return (
@@ -23,7 +24,7 @@ const UserDetails = () => {
 
             })}
 
-            <h3>Welcome to UserDetails  </h3>
+            <h3>WelcometoUserDetails  </h3>
 <ul>
     <li>{users.name}</li>
     <li>{users.email}</li>

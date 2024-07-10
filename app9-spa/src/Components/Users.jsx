@@ -1,30 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const Users = () => {
-    const [usersDetails, setuserDetails] = useState([]);
-    useEffect(() => {
-        getusers()
+const User = () => {
+  const [userDetails, setuserdetails] = useState([]);
+  useEffect(() => {
+    getuser();
+  }, []);
 
-    }, []);
-    const getusers = async () => {
-        const response = await
-            (await fetch("https://jsonplaceholder.typicode.com/users"
-            ).then());
-        const users = await response.json();
-        
-        setuserDetails(users)
-    }
-    return (
-        <div className="container">
-            {usersDetails.map((usr, i) =>
-                <p key={i}>
-                    <Link to={`${usr.id}`}>{usr.name}</Link>
-                    
-                    
-                </p>
-            )}
-        </div>
-    )
-}
-export default Users;
+  const getuser = async () => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users"
+    ).then();
+    const users = await response.json();
+    setuserdetails(users);
+  };
+  return (
+    <div>
+      {userDetails.map((usr, i) => (
+        <p key={i}>
+          <Link to={`${usr.id}`}>{usr.name}</Link>
+        </p>
+      ))}
+    </div>
+  );
+};
+
+export default User;
