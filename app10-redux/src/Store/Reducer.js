@@ -1,23 +1,30 @@
 import { CREATE_USER, DELETE_USER, READ_USER, UPDATE_USER } from "./Constants";
 
-const initalstate = {
-    users: [],
+const Initialstate = {
+    users: ["ravi", "gopi", "sai"],
 };
-export const RootReducer = (state, action) => {
-    switch (action.payload) {
+export const RootReducer = (state = Initialstate, action) => {
+    console.log("Rootreducercall")
+    switch (action.type) {
         case CREATE_USER:
+            return {
+                ...state,
+                users: [state.users, action.payload],
+            }
 
-            break;
         case READ_USER:
-
-            break;
-        case UPDATE_USER:
+            return state
+                
+        case DELETE_USER:
 
             break;
 
         case DELETE_USER:
-
-            break;
+return{
+    ...state,
+    users:[...state.users.filter((users)=>users!==action.payload)],
+}
+            
 
         default:
             return state;
