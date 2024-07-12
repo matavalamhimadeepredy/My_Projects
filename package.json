@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.6",
     "assert": "^2.1.0",
     "axios": "^1.7.2",
     "constants-browserify": "^1.0.0",
