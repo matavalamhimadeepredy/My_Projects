@@ -1,97 +1,94 @@
 
-import { Provider, useDispatch, useSelector } from 'react-redux';
-import { createuseraction } from './Store/Action';
-import './App.css';
-
+import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
 import {
-
-  deleteuseraction,
-  readuseraction,
-  updateuseraction
-} from "./Store/Action"
-import { useEffect, useState } from 'react';
-import { createStore } from 'redux';
-
-const store = createStore(createStore)
+  createUserAction,
+  deleteUserAction,
+  readUserAction,
+  updateUserAction,
+} from "./Store/Action";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [username, setusername] = useState("")
-  const userinfo = useSelector((state) => state.users);
-  const [isEdit, setIsedit] = useState(false);
-  const [index, setindex] = useState(null);
+
+  const [username, setUsername] = useState("");
+  const usersInfo = useSelector((state) => state.users);
+  const [isEdit, setIsEdit] = useState(false);
+  const [index, setIndex] = useState(null);
   const dispatch = useDispatch();
-  const handlecreateuser = () => {
-    dispatch(createuseraction("hima"))
-  };
-  const readusers = () => {
-    dispatch(readuseraction());
-  };
-  const handledelete = (usr) => {
-    dispatch(deleteuseraction());
+  console.log(usersInfo);
 
+  const handleCreateUser = () => {
+    console.log("handleCreateUser Called !!");
+    dispatch(createUserAction("Ramu"));
   };
-  const handleupdate=()=>{
-    dispatch(handlechange)
-  }
-  const handlechange = (e) => {
-    const newusername = e.target.value;
-    setusername(newusername);
+  const readUsers = () => {
+    dispatch(readUserAction());
   };
-  const handlesubmit = () => {
-    dispatch(createuseraction(username));
-  };
-  const handleedit = (usr, i) => {
-    setIsedit(true);
-    setusername(usr);
-    setindex(i);
 
+  const handleDelete = (usr) => {
+    dispatch(deleteUserAction(usr));
   };
-  useEffect(()=>{
-    readusers();
-  },[]);
 
+  const handleChange = (e) => {
+    const newUsername = e.target.value;
+    setUsername(newUsername);
+  };
+
+  const handleSubmit = () => {
+    dispatch(createUserAction(username));
+  };
+  const handleEdit = (usr, i) => {
+    setIsEdit(true);
+    setUsername(usr);
+    setIndex(i);
+  };
+  useEffect(() => {
+    readUsers();
+  }, []);
+
+  const handleUpdate = () => {
+    dispatch(updateUserAction({ username, index }));
+  };
   return (
-    <Provider store={store}>
-      <div className="App">
-        <h2>Welcome to Redux Reddy</h2>
-        <button onClick={handlecreateuser}>Create User</button>
-        <div>
-          <form>
-            <label>username:</label>
-            <input 
-            type="text"
-            name="username"
-            value={username}
-            onChange={handlechange}
-            />
-            {isEdit?(
-           <button onClick={handlechange} type="button">updateuser</button>
-            ):(
-             
-            <button onClick={handlesubmit} type="button">Add user</button>
-            )}
-          </form>
-          <ul>
-            {userinfo.map((user, i) => (
-              <li key={i}>{user.emai}{""}
-              <button onClick={()=>{
-                handledelete(user);
-              }}>
-                Delete
-              </button>
+    <div className="App">
+      <h2>Welcome to Redux Demo !!!</h2>
+      <button onClick={handleCreateUser}>Create User</button>
 
-              <button onClick={()=>{
-                handledelete(user,i);
-              }}>
-                Edit
-              </button>
-              
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </Provider>
+      <hr />
+      <form>
+        <label>User Name : </label>
+        <input type="text" name="username" value={username} onChange={handleChange} />
+        {isEdit ? (
+          <button onClick={handleUpdate} type="button">Update User</button>
+        ) : (
+          <button onClick={handleSubmit} type="button">
+            ADD User
+          </button>
+        )}
+      </form>
+      <ul>
+        {usersInfo.map((usr, i) => (
+          <li key={i}>
+            {usr}{" "}
+            <button
+              onClick={() => {
+                handleDelete(usr);
+              }}
+            >
+              Delete
+            </button>
+            <button
+              onClick={() => {
+                handleEdit(usr, i);
+              }}
+            >
+              Edit
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

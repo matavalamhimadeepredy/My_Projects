@@ -1,22 +1,16 @@
 
-import { useDispatch } from "react-redux";
-import { CREATE_USER, DELETE_USER, READ_USER, UPDATE_USER } from "./Constrants";
+import { CREATE_USER, DELETE_USER, READ_USER, UPDATE_USER } from "./Constrants"
 
-
-export const createuseraction = (username) => {
+export const createUserAction = (username) => {
   return {
     type: CREATE_USER,
     payload: username,
   };
 };
-export const readuseraction = () => {
-  return async(dispatch)=>{
-    const Users=await (await fetch("http://localhost:3000/nethaji_users")).json()
-    dispatch({
-      type:READ_USER,
-      payload:Users
-    })
-  }
+export const readUserAction = () => {
+  return {
+    type: READ_USER,
+  };
 };
 export const updateUserAction = ({ username, index }) => {
   return {
@@ -27,7 +21,7 @@ export const updateUserAction = ({ username, index }) => {
     },
   };
 };
-export const deleteuseraction = (user) => {
+export const deleteUserAction = (user) => {
   return {
     type: DELETE_USER,
     payload: user,

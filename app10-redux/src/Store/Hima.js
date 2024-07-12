@@ -1,11 +1,12 @@
 
 import { CREATE_USER } from './Constrants';
 import { DELETE_USER, READ_USER, UPDATE_USER } from './Constrants';
+
  
 const Initialstate = {
   users: [],
 };
- export const Hima_Reducer = (state = Initialstate, action) => {
+ export const Hima = (state = Initialstate, action) => {
   switch (action.type) {
     case CREATE_USER:
       console.log(action.payload);
