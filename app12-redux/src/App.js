@@ -1,16 +1,12 @@
-
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  createUserAction,
-  deleteUserAction,
-  readUserAction,
-  updateUserAction,
-} from'./Store/action';
+import {createuseraction,deleteUserAction,readUserAction,updateUserAction,} from"./Store/Store";
 import { useEffect, useState } from "react";
 
+
+
 function App() {
-  const [user, setUser] = useState({
+  const [Userslice, setUser] = useState({
     email: "",
     password: "",
   });
@@ -20,30 +16,29 @@ function App() {
   const dispatch = useDispatch();
 
   const handleCreateUser = () => {
-    dispatch(createUserAction(user));
+    dispatch('createUserAction'(Userslice));
     clearUser();
-  };
-
+    };
   const readUsers = () => {
-    dispatch(readUserAction());
+    dispatch('readUserAction'());
   };
 
   const handleDelete = (usr) => {
-    dispatch(deleteUserAction(usr));
+    dispatch('deleteUserAction'(Userslice));
   };
 
   const handleChange = (e) => {
-    const newUser = { ...user, [e.target.name]: e.target.value };
-    setUser(newUser);
+    const users = { ...Userslice, [e.target.name]: e.target.value };
+    setUser(Userslice);
   };
 
   const handleSubmit = () => {
     if (isEdit) {
-      dispatch(updateUserAction({ user, index }));
+      dispatch('updateUserAction'({ Userslice, index }));
       setIsEdit(false);
       setIndex(null);
     } else {
-      dispatch(createUserAction(user));
+      dispatch((Userslice));
     }
     clearUser();
   };
@@ -67,7 +62,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Welcome to Redux Demo !!!</h2>
+      <h2>Welcome to Redux reddy !!!</h2>
       <button onClick={handleCreateUser}>Create User</button>
       <hr />
       <form>
@@ -75,7 +70,7 @@ function App() {
         <input
           type="text"
           name="email"
-          value={user.email}
+          value={Userslice.email}
           onChange={handleChange}
         />{" "}
         <br />
@@ -83,7 +78,7 @@ function App() {
         <input
           type="text"
           name="password"
-          value={user.password}
+          value={Userslice.password}
           onChange={handleChange}
         />
         <br />
@@ -92,19 +87,19 @@ function App() {
         </button>
       </form>
       <ul>
-        {usersInfo.map((usr, i) => (
+        {usersInfo.map((Userslice, i) => (
           <li key={i}>
-            {usr.email}{" "}
+            {Userslice.email}{" "}
             <button
               onClick={() => {
-                handleDelete(usr);
+                handleDelete(Userslice);
               }}
             >
               Delete
             </button>
             <button
               onClick={() => {
-                handleEdit(usr, i);
+                handleEdit(Userslice, i);
               }}
             >
               Edit
