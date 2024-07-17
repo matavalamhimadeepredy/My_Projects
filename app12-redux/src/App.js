@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
 
   const handleCreateUser = () => {
-    dispatch('createUserAction'(Userslice));
+    dispatch('createuseraction'(Userslice));
     clearUser();
     };
   const readUsers = () => {

@@ -7,12 +7,12 @@ export const Userslice = createSlice({
     initialState: initialstate,
     reducers: {
         createusers:(state,action)=>{
-            state.users.push(action.payload)
+            state.Userslice.push(action.payload)
         },
         readuser:()=>{},
         updateuser:()=>{},
         deleteuser:(state,action)=>{
-            state.users=state.users.filter((usr)=>usr  !==action.payload)
+            state.Userslice=state.users.filter((usr)=>usr  !==action.payload)
         },
     },
 });

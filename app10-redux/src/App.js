@@ -20,7 +20,7 @@ function App() {
 
   const handleCreateUser = () => {
     console.log("handleCreateUser Called !!");
-    dispatch(createUserAction("Ramu"));
+    dispatch(createUserAction("HimadeepReddy"));
   };
   const readUsers = () => {
     dispatch(readUserAction());
@@ -52,7 +52,7 @@ function App() {
   };
   return (
     <div className="App">
-      <h2>Welcome to Redux Demo !!!</h2>
+      <h2>Welcome to  HimadeepReddy Redux Demo </h2>
       <button onClick={handleCreateUser}>Create User</button>
 
       <hr />
