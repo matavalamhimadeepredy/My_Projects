@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fullname(good){
+        
+            console.log(good+""+this.fname+""+this.lname);
+        }
+        const person1={
+            fname:"hima",
+            lname:"reddyroyal",
+        };
+        const person2={
+            fname:"gopi",
+            lname:"reddy",
+        };
+        fullname.call(person1,"hello");
+        fullname.call(person2,"himadeep")
+    </script>
+</body>
+</html>
